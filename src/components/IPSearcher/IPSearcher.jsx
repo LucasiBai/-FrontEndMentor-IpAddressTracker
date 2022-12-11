@@ -1,6 +1,12 @@
 import { useState } from "react";
 
-const IPSearcher = () => {
+const ArrowIcon = () => (
+	<svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+		<path fill="none" stroke="#FFF" strokeWidth="3" d="M2 1l6 6-6 6" />
+	</svg>
+);
+
+const IPSearcher = ({ handleFunction }) => {
 	const [formData, setFormData] = useState({ ip: "" });
 
 	const handleCheckInputValue = (e) => {
@@ -24,6 +30,11 @@ const IPSearcher = () => {
 		setFormData(updatedData);
 	};
 
+	const handleOnClick = (e) => {
+		e.preventDefault();
+		handleFunction(formData.ip);
+	};
+
 	return (
 		<form>
 			<input
@@ -32,7 +43,17 @@ const IPSearcher = () => {
 				value={formData.ip}
 				onChange={handleCheckInputValue}
 			/>
-			<button />
+			<button
+				style={{
+					background: "black",
+					border: "none",
+					padding: "1.2rem 1.5rem",
+					borderRadius: "0 10px 10px 0",
+				}}
+				onClick={handleOnClick}
+			>
+				<ArrowIcon />
+			</button>
 		</form>
 	);
 };

@@ -42,8 +42,10 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
+- [Adblock Detect React](https://www.npmjs.com/package/adblock-detect-react)
 - [Axios](https://axios-http.com/)
 - [IP Geolocation API](https://geo.ipify.org/docs)
+- [Leaflet](https://leafletjs.com/)
 
 ## Author
 

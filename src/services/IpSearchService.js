@@ -2,7 +2,8 @@ import { enviroment } from "../enviroment";
 import axios from "axios";
 
 const getIpData = async (ip) => {
-	const URL = `https://geo.ipify.org/api/v2/country?apiKey=${enviroment.geoApiKey}&ipAddress=${ip}`;
+	const URL = `
+  https://geo.ipify.org/api/v2/country,city?apiKey=${enviroment.geoApiKey}&ipAddress=${ip}`;
 
 	const res = await axios.get(URL);
 	const data = await res;

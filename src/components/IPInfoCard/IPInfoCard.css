@@ -1,0 +1,9 @@
+.ip-info-card__box {
+	background-color: white;
+	max-width: 400px;
+	width: 87%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 18px;
+}

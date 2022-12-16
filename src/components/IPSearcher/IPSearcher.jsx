@@ -32,7 +32,9 @@ const IPSearcher = ({ handleFunction }) => {
 
 	const handleOnClick = (e) => {
 		e.preventDefault();
-		handleFunction(formData.ip);
+		if (formData.ip) {
+			handleFunction(formData.ip);
+		}
 	};
 
 	return (

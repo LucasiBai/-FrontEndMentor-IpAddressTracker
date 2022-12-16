@@ -1,6 +1,8 @@
+import "./IPInfoCard.css";
+
 const IPInfoCard = ({ data }) => {
 	return (
-		<section>
+		<section className="ip-info-card__box">
 			<article>
 				<h4>IP ADDRESS</h4>
 				<h5>{data.ip}</h5>

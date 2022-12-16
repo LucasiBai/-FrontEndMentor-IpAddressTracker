@@ -6,8 +6,19 @@ import IPSearcher from "../../components/IPSearcher/IPSearcher";
 import IPInfoCard from "../../components/IPInfoCard/IPInfoCard";
 import MapView from "../../components/MapView/MapView";
 
+import "./SearcherContainer.css";
+
 const SearcherContainer = () => {
-	const [ipData, setIpData] = useState();
+	const [ipData, setIpData] = useState({
+		ip: "8.8.8.8",
+		location: {
+			country: "US",
+			timezone: "-8.00",
+			lat: 37.38605,
+			lng: -122.08385,
+		},
+		isp: "Google Inc",
+	});
 
 	const handleGetIp = (ip) => {
 		getData(ip);
@@ -22,16 +33,15 @@ const SearcherContainer = () => {
 	useEffect(() => {}, []);
 	return (
 		<main>
-			<IPSearcher handleFunction={handleGetIp} />
-			{ipData && (
-				<Fragment>
-					<IPInfoCard data={ipData} />
-					<MapView
-						coords={[ipData.location.lat, ipData.location.lng]}
-						popup={ipData.isp}
-					/>
-				</Fragment>
-			)}
+			<div className="interactive__box">
+				<IPSearcher handleFunction={handleGetIp} />
+				<IPInfoCard data={ipData} />
+			</div>
+
+			<MapView
+				coords={[ipData.location.lat, ipData.location.lng]}
+				popup={ipData.isp}
+			/>
 		</main>
 	);
 };

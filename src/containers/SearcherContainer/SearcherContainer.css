@@ -8,9 +8,3 @@
 	top: 76px;
 	gap: 1.5rem;
 }
-
-.interactive__box article {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}

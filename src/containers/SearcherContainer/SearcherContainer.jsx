@@ -13,11 +13,11 @@ const SearcherContainer = () => {
 		ip: "8.8.8.8",
 		location: {
 			country: "US",
-			timezone: "-8.00",
+			timezone: "UTC -08:00",
 			lat: 37.38605,
 			lng: -122.08385,
 		},
-		isp: "Google Inc",
+		isp: "Google LLC",
 	});
 
 	const handleGetIp = (ip) => {

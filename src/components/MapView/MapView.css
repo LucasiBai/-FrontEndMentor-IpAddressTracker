@@ -1,3 +1,7 @@
 .map-view__box > * {
 	height: 500px;
 }
+
+.leaflet-control {
+	display: none;
+}

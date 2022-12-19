@@ -6,4 +6,29 @@
 	flex-direction: column;
 	align-items: center;
 	border-radius: 18px;
+	gap: 1.5rem;
+	padding: 2rem 0;
+}
+
+.ip-info-card__box article > * {
+	margin: 0;
+}
+
+.ip-info-card__box article {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.ip-info-card__box article h4 {
+	font-size: 11px;
+	letter-spacing: 1.2px;
+	color: #808080e0;
+	font-weight: 700;
+}
+
+.ip-info-card__box article h5 {
+	font-size: 22px;
+	font-weight: 500;
 }

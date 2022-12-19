@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import "./IPSearcher.css";
+
 const ArrowIcon = () => (
 	<svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
 		<path fill="none" stroke="#FFF" strokeWidth="3" d="M2 1l6 6-6 6" />
@@ -7,7 +9,7 @@ const ArrowIcon = () => (
 );
 
 const IPSearcher = ({ handleFunction }) => {
-	const [formData, setFormData] = useState({ ip: "" });
+	const [formData, setFormData] = useState({ ip: "8.8.8.8" });
 
 	const handleCheckInputValue = (e) => {
 		const { value } = e.target;
@@ -38,7 +40,7 @@ const IPSearcher = ({ handleFunction }) => {
 	};
 
 	return (
-		<form>
+		<form className="ip-searcher__box">
 			<input
 				type="text"
 				name="ip"

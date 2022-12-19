@@ -1,0 +1,18 @@
+.ip-searcher__box {
+	width: 87%;
+	position: relative;
+}
+
+.ip-searcher__box input {
+	width: 87%;
+	padding: 1rem 1.2rem 1.1rem;
+	font-size: 18px;
+	border-radius: 10px;
+	border: none;
+}
+
+.ip-searcher__box button {
+	position: absolute;
+	right: 0;
+	top: 0;
+}

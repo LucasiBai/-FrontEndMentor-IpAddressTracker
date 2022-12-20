@@ -7,7 +7,7 @@
 	align-items: center;
 	border-radius: 18px;
 	gap: 1.5rem;
-	padding: 2rem 0;
+	padding: 1.5rem 0;
 }
 
 .ip-info-card__box article > * {
@@ -31,4 +31,27 @@
 .ip-info-card__box article h5 {
 	font-size: 22px;
 	font-weight: 500;
+}
+
+.ip-info-card__box hr {
+	display: none;
+}
+
+@media only screen and (min-width: 576px) {
+	.ip-info-card__box {
+		flex-direction: row;
+		max-width: 1100px;
+		width: 87%;
+		justify-content: center;
+		padding: 1.5rem 2rem;
+	}
+
+	.ip-info-card__box hr {
+		display: block;
+		height: 3rem;
+		background-color: #58585830;
+		border: none;
+		width: 2px;
+		margin: 0;
+	}
 }

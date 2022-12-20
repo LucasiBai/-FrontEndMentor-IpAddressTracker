@@ -7,7 +7,7 @@
 	width: 87%;
 	padding: 1rem 1.2rem 1.1rem;
 	font-size: 18px;
-	border-radius: 10px;
+	border-radius: 15px;
 	border: none;
 }
 
@@ -15,4 +15,10 @@
 	position: absolute;
 	right: 0;
 	top: 0;
+}
+
+@media only screen and (min-width: 576px) {
+	.ip-searcher__box {
+		max-width: 550px;
+	}
 }

@@ -1,7 +1,17 @@
-.map-view__box > * {
-	height: 500px;
+.map-view__box {
+	height: 100%;
+}
+
+.map-view__box .leaflet-container {
+	height: 100%;
 }
 
 .leaflet-control {
 	display: none;
+}
+
+@media only screen and (min-width: 576px) {
+	.map-view__box {
+		height: 70vh;
+	}
 }

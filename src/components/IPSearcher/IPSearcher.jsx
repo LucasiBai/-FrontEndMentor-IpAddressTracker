@@ -40,11 +40,12 @@ const IPSearcher = ({ handleFunction }) => {
 	};
 
 	return (
-		<form className="ip-searcher__box">
+		<form className="ip-searcher__box" onSubmit={handleOnClick}>
 			<input
 				type="text"
 				name="ip"
 				value={formData.ip}
+				placeholder="Search for any IP address or domain"
 				onChange={handleCheckInputValue}
 			/>
 			<button
@@ -52,9 +53,9 @@ const IPSearcher = ({ handleFunction }) => {
 					background: "black",
 					border: "none",
 					padding: "1.2rem 1.5rem",
-					borderRadius: "0 10px 10px 0",
+					borderRadius: "0 15px 15px 0",
 				}}
-				onClick={handleOnClick}
+				type="submit"
 			>
 				<ArrowIcon />
 			</button>

@@ -10,3 +10,9 @@ nav a {
 	font-size: 27px;
 	margin: 1.4rem;
 }
+
+@media only screen and (min-width: 576px) {
+	nav a {
+		margin: 1.6rem;
+	}
+}

@@ -5,7 +5,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	border-radius: 18px;
+	border-radius: 15px;
 	gap: 1.5rem;
 	padding: 1.5rem 0;
 }
@@ -19,6 +19,7 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 0.5rem;
+	max-width: 200px;
 }
 
 .ip-info-card__box article h4 {
@@ -40,9 +41,9 @@
 @media only screen and (min-width: 576px) {
 	.ip-info-card__box {
 		flex-direction: row;
-		max-width: 1100px;
+		max-width: 1000px;
 		width: 87%;
-		justify-content: center;
+		justify-content: space-around;
 		padding: 1.5rem 2rem;
 	}
 
@@ -53,5 +54,15 @@
 		border: none;
 		width: 2px;
 		margin: 0;
+	}
+	.ip-info-card__box article {
+		align-items: flex-start;
+		width: 100%;
+	}
+	.ip-info-card__box div {
+		display: flex;
+		gap: 2rem;
+		max-width: 200px;
+		width: 100%;
 	}
 }

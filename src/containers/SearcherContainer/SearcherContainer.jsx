@@ -12,6 +12,9 @@ const SearcherContainer = () => {
 	const [ipData, setIpData] = useState({
 		ip: "8.8.8.8",
 		location: {
+			region: "California",
+			city: "Mountain View",
+			postalCode: "94043",
 			country: "US",
 			timezone: "UTC -08:00",
 			lat: 37.38605,

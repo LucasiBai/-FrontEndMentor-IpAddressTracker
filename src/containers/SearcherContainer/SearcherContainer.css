@@ -8,3 +8,10 @@
 	top: 76px;
 	gap: 1.5rem;
 }
+
+@media only screen and (min-width: 576px) {
+	.interactive__box {
+		top: 87px;
+		gap: 3.5rem;
+	}
+}

@@ -9,7 +9,7 @@ const ArrowIcon = () => (
 );
 
 const IPSearcher = ({ handleFunction }) => {
-	const [formData, setFormData] = useState({ ip: "8.8.8.8" });
+	const [formData, setFormData] = useState({ ip: "" });
 
 	const handleCheckInputValue = (e) => {
 		const { value } = e.target;

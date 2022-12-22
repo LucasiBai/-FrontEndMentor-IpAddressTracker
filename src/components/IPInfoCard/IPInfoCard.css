@@ -8,6 +8,7 @@
 	border-radius: 15px;
 	gap: 1.5rem;
 	padding: 1.5rem 0;
+	box-shadow: 0 0 5pc #00000005;
 }
 
 .ip-info-card__box article > * {
@@ -19,7 +20,7 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 0.5rem;
-	max-width: 200px;
+	max-width: 300px;
 }
 
 .ip-info-card__box article h4 {
@@ -44,6 +45,7 @@
 		max-width: 1000px;
 		width: 87%;
 		justify-content: space-around;
+		align-items: flex-start;
 		padding: 1.5rem 2rem;
 	}
 
@@ -54,10 +56,12 @@
 		border: none;
 		width: 2px;
 		margin: 0;
+		margin-top: 0.7rem;
 	}
 	.ip-info-card__box article {
 		align-items: flex-start;
 		width: 100%;
+		max-width: 200px;
 	}
 	.ip-info-card__box div {
 		display: flex;

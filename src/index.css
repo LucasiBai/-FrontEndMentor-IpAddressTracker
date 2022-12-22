@@ -11,5 +11,5 @@ code {
 
 #root {
 	display: grid;
-	grid-template-rows: 1fr 2fr;
+	grid-template-rows: 272px 2fr;
 }

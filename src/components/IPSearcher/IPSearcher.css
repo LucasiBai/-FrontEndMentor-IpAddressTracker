@@ -1,6 +1,7 @@
 .ip-searcher__box {
 	width: 87%;
 	position: relative;
+	box-shadow: 0 0 5pc #00000005;
 }
 
 .ip-searcher__box input {

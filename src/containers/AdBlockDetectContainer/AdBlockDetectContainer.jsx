@@ -30,7 +30,7 @@ const AdBlockDetectContainer = ({ children }) => {
 			{showAdvertisement && (
 				<Advertisement
 					message={
-						"Attention! If you are using Brave Browser to visit this page, I strongly recommend that you disable Brave Shields, otherwise the application won't work."
+						"Attention! If you are using Brave Browser to visit this page, I strongly recommend that you disable Brave Shields, otherwise the application won't work. "
 					}
 					handleCloseAd={() => {
 						setShowAdvertisement(false);

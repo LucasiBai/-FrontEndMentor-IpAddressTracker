@@ -10,12 +10,15 @@
 	font-size: 18px;
 	border-radius: 15px;
 	border: none;
+	cursor: pointer;
+	outline: none;
 }
 
 .ip-searcher__box button {
 	position: absolute;
 	right: 0;
 	top: 0;
+	cursor: pointer;
 }
 
 @media only screen and (min-width: 576px) {

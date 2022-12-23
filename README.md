@@ -41,6 +41,7 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- Font Awesome
 - [React](https://reactjs.org/) - JS library
 - [Adblock Detect React](https://www.npmjs.com/package/adblock-detect-react)
 - [Axios](https://axios-http.com/)

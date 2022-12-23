@@ -23,21 +23,27 @@ const SearcherContainer = () => {
 		isp: "Google LLC",
 	});
 
+	const [invalidIp, setInvalidIp] = useState(false);
+
 	const handleGetIp = (ip) => {
-		getData(ip);
+		if (ip) {
+			setInvalidIp(false);
+			getData(ip);
+		} else {
+			setInvalidIp(true);
+		}
 	};
 
 	const getData = async (ip) => {
-		const res = await getIpData(ip);
+		const res = await getIpData(ip).catch((error) => setInvalidIp(true));
 		setIpData(res.data);
-		console.log(res);
 	};
 
 	useEffect(() => {}, []);
 	return (
 		<main>
 			<div className="interactive__box">
-				<IPSearcher handleFunction={handleGetIp} />
+				<IPSearcher handleFunction={handleGetIp} valid={!invalidIp} />
 				<IPInfoCard data={ipData} />
 			</div>
 

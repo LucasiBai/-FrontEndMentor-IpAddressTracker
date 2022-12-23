@@ -8,7 +8,7 @@ const ArrowIcon = () => (
 	</svg>
 );
 
-const IPSearcher = ({ handleFunction }) => {
+const IPSearcher = ({ handleFunction, valid }) => {
 	const [formData, setFormData] = useState({ ip: "" });
 
 	const handleCheckInputValue = (e) => {
@@ -39,26 +39,40 @@ const IPSearcher = ({ handleFunction }) => {
 		}
 	};
 
+	const setPlaceHolder = () => {
+		if (window.innerWidth > 576) {
+			return "Search for any IP address or domain";
+		}
+		return "Search for any IP address";
+	};
+
 	return (
 		<form className="ip-searcher__box" onSubmit={handleOnClick}>
-			<input
-				type="text"
-				name="ip"
-				value={formData.ip}
-				placeholder="Search for any IP address or domain"
-				onChange={handleCheckInputValue}
-			/>
-			<button
-				style={{
-					background: "black",
-					border: "none",
-					padding: "1.2rem 1.5rem",
-					borderRadius: "0 15px 15px 0",
-				}}
-				type="submit"
-			>
-				<ArrowIcon />
-			</button>
+			<div>
+				<input
+					type="text"
+					name="ip"
+					value={formData.ip}
+					placeholder={setPlaceHolder()}
+					onChange={handleCheckInputValue}
+				/>
+				<button
+					style={{
+						background: "black",
+						border: "none",
+						padding: "1.2rem 1.5rem",
+						borderRadius: "0 15px 15px 0",
+					}}
+					type="submit"
+				>
+					<ArrowIcon />
+				</button>
+			</div>
+			{!valid && (
+				<label style={{ color: "rgb(255 86 78)", margin: "0.5rem 0.5rem" }}>
+					The entered IP is invalid.
+				</label>
+			)}
 		</form>
 	);
 };

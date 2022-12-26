@@ -22,8 +22,10 @@ const SearcherContainer = () => {
 		},
 		isp: "Google LLC",
 	});
+	const [updateMap, setUpdateMap] = useState(false);
 
 	const [invalidIp, setInvalidIp] = useState(false);
+	const [invalidMsg, setInvalidMsg] = useState("");
 
 	const handleGetIp = (ip) => {
 		if (ip) {
@@ -35,22 +37,41 @@ const SearcherContainer = () => {
 	};
 
 	const getData = async (ip) => {
-		const res = await getIpData(ip).catch((error) => setInvalidIp(true));
+		const res = await getIpData(ip).catch((error) => {
+			if (error.code === "ERR_BAD_REQUEST") {
+				setInvalidMsg("The entered IP is invalid.");
+			} else {
+				setInvalidMsg(
+					"Something went wrong. If you are using AdBlock, please disable it.",
+				);
+			}
+			setInvalidIp(true);
+		});
 		setIpData(res.data);
+		setUpdateMap(true);
+		setTimeout(() => {
+			setUpdateMap(false);
+		}, 100);
 	};
 
-	useEffect(() => {}, []);
+	useEffect(() => {}, [ipData]);
 	return (
 		<main>
 			<div className="interactive__box">
-				<IPSearcher handleFunction={handleGetIp} valid={!invalidIp} />
+				<IPSearcher
+					handleFunction={handleGetIp}
+					valid={!invalidIp}
+					invalidMsg={invalidMsg}
+				/>
 				<IPInfoCard data={ipData} />
 			</div>
 
-			<MapView
-				coords={[ipData.location.lat, ipData.location.lng]}
-				popup={ipData.isp}
-			/>
+			{!updateMap && (
+				<MapView
+					coords={[ipData.location.lat, ipData.location.lng]}
+					popup={ipData.isp}
+				/>
+			)}
 		</main>
 	);
 };

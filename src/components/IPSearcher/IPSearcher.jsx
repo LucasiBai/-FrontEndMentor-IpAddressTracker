@@ -8,7 +8,7 @@ const ArrowIcon = () => (
 	</svg>
 );
 
-const IPSearcher = ({ handleFunction, valid }) => {
+const IPSearcher = ({ handleFunction, valid, invalidMsg }) => {
 	const [formData, setFormData] = useState({ ip: "" });
 
 	const handleCheckInputValue = (e) => {
@@ -70,7 +70,7 @@ const IPSearcher = ({ handleFunction, valid }) => {
 			</div>
 			{!valid && (
 				<label style={{ color: "rgb(255 86 78)", margin: "0.5rem 0.5rem" }}>
-					The entered IP is invalid.
+					{invalidMsg}
 				</label>
 			)}
 		</form>

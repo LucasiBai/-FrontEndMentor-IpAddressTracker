@@ -8,7 +8,7 @@ const AdBlockDetectContainer = ({ children }) => {
 
 	return (
 		<Fragment>
-			{/* {adBlockDetected && (
+			{adBlockDetected && (
 				<div
 					style={{
 						position: "fixed",
@@ -25,7 +25,7 @@ const AdBlockDetectContainer = ({ children }) => {
 						Please disable AdBlock to make the app work.
 					</h6>
 				</div>
-			)} */}
+			)}
 			{children}
 			{showAdvertisement && (
 				<Advertisement
